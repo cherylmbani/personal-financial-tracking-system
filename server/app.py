@@ -13,11 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["SECRET_KEY"]="super_secret"
 app.json.compact = False
 
-CORS(app, resources={r"/*": {
-    "origins": "http://localhost:5173",
-    "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    "allow_headers": ["Content-Type", "Authorization"]
-}})
+CORS(app)
 
 
 
