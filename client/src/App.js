@@ -6,7 +6,8 @@ import Signup from './Pages/Signup.jsx';
 import Dashboard from './Pages/Dashboard.jsx';  
 import Transactions from './Pages/Transactions.jsx'; 
 import Analytics from './Pages/Analytics.jsx';  
-import Home from './Pages/Home.jsx'
+import Home from './Pages/Home.jsx';
+
 
 function App(){
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
@@ -22,6 +23,7 @@ function App(){
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+    window.location.href='/login';
   };
 
   return(
